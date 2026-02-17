@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon API</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(
+          135deg,
+          #ffeef8 0%,
+          #ffe5f5 50%,
+          #f3e5f5 100%
+        );
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 700px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 30px;
+        padding: 40px;
+        box-shadow: 0 10px 40px rgba(219, 112, 147, 0.2);
+      }
+
+      h1 {
+        color: #d946a6;
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 2.2em;
+        text-shadow: 2px 2px 4px rgba(217, 70, 166, 0.1);
+      }
+
+      .search-section {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 30px;
+      }
+
+      #pokemonName {
+        flex: 1;
+        padding: 15px 20px;
+        border: 3px solid #f8bbd0;
+        border-radius: 50px;
+        font-size: 16px;
+        outline: none;
+        transition: all 0.3s ease;
+      }
+
+      #pokemonName:focus {
+        border-color: #d946a6;
+        box-shadow: 0 0 0 3px rgba(217, 70, 166, 0.1);
+      }
+
+      button {
+        padding: 15px 35px;
+        background: linear-gradient(135deg, #d946a6 0%, #ec4899 100%);
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(217, 70, 166, 0.3);
+      }
+
+      button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(217, 70, 166, 0.4);
+      }
+
+      button:active {
+        transform: translateY(0);
+      }
+
+      .pokemon-display {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 30px;
+      }
+
+      .sprite-container {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+        background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
+        border-radius: 20px;
+      }
+
+      .sprite-container.active {
+        display: flex;
+      }
+
+      .sprite-label {
+        color: #d946a6;
+        font-size: 1.5em;
+        font-weight: 600;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-align: center;
+      }
+
+      .sprite-container img {
+        width: 300px;
+        height: 300px;
+        object-fit: contain;
+        filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
+        background: white;
+        border-radius: 15px;
+        padding: 20px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          padding: 25px;
+        }
+
+        h1 {
+          font-size: 1.8em;
+        }
+
+        .search-section {
+          flex-direction: column;
+        }
+
+        .sprite-container img {
+          width: 280px;
+          height: 280px;
+        }
+
+        .sprite-label {
+          font-size: 1.2em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>✨ Welcome to my Pokemon API Page! ✨</h1>
+
+      <div class="search-section">
+        <input type="text" id="pokemonName" placeholder="Enter Pokemon Name" />
+        <button onclick="fetchData()">Search</button>
+      </div>
+
+      <div class="pokemon-display">
+        <div class="sprite-container" id="normalContainer">
+          <div class="sprite-label">Normal Version</div>
+          <img src="" alt="Pokemon Sprite" id="pokemonSprite" />
+        </div>
+
+        <div class="sprite-container" id="shinyContainer">
+          <div class="sprite-label">✨ Shiny Version ✨</div>
+          <img src="" alt="Pokemon Sprite Shiny" id="pokemonSpriteShiny" />
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
