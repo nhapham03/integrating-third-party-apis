@@ -30,7 +30,7 @@ A beautiful, girly-themed web application that fetches and displays Pokemon data
 ## 📁 Project Structure
 
 ```
-girly-pokemon-api/
+PokemonAPI/
 │
 ├── index.html          # Main HTML file with styling
 ├── index.js            # JavaScript file for API calls
@@ -61,7 +61,7 @@ girly-pokemon-api/
 ## 👩‍💻 Author
 
 Created with 💖 by Nha Pham. Video Demonstration: 
-https://youtu.be/9vn5_MtwiVo
+[https://youtu.be/9vn5_MtwiVo]
 
 ## 📄 License
 
