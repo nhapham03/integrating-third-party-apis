@@ -1,4 +1,4 @@
-# 🌸 Girly Pokemon API Page
+# 🌸 Pokemon API Page
 
 A beautiful, girly-themed web application that fetches and displays Pokemon data using the PokeAPI. Features a soft pastel pink color scheme with an organized, user-friendly interface.
 
