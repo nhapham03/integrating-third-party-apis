@@ -61,7 +61,7 @@ PokemonAPI/
 ## 👩‍💻 Author
 
 Created with 💖 by Nha Pham. Video Demonstration: 
-[https://youtu.be/9vn5_MtwiVo]
+ https://youtu.be/9vn5_MtwiVo
 
 ## 📄 License
 
