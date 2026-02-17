@@ -60,7 +60,8 @@ girly-pokemon-api/
 
 ## 👩‍💻 Author
 
-Created with 💖 by Nha Pham.
+Created with 💖 by Nha Pham. Video Demonstration: 
+https://youtu.be/9vn5_MtwiVo
 
 ## 📄 License
 
